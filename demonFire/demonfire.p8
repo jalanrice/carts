@@ -33,6 +33,8 @@ function _draw()
 		draw_text()
 		if (btn(❎)) show_inventory()
 	else
+		draw_map()
+		draw_player()
 		draw_win_lose()
 	end
 end
@@ -185,7 +187,8 @@ function check_win_lose()
 end
 
 function draw_win_lose()
-	camera()
+	camera()	
+	rectfill(18,62,108,82,0)
 	if (game_win) then
 		print("★ you win! ★",37,64,7)
 	else
